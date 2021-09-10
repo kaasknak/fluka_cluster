@@ -11,6 +11,8 @@ folder=sys.argv[4]
 
 os.system("mkdir "+folder)
 
+os.system("cp "+sys.argv[1]+" "+folder)
+
 for i in range(first,last):
     if len(str(i))==1:
         os.system("cat "+sys.argv[1]+" | sed 's/RANDOMIZ.*/RANDOMIZ                    "+str(i)+"./' > "+folder+"/"+sys.argv[1][:-4]+"_"+str(i)+".inp")
