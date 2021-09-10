@@ -43,6 +43,7 @@ You should now be able to open *filename.inp* using flair and all data should be
  1. python3
  2. rename
  3. The python packages system and os
+
 All of these should come preinstalled on Ubuntu 18.04, 20.04 and many more distributions.
 
 ### How do I get these scripts without copy pasting?
