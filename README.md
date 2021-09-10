@@ -37,12 +37,12 @@ You should now be able to open *filename.inp* using flair and all data should be
 *push.py* requires the following programs to be installed:
  1. python3
  2. GNU sed
- 3 the python packages system and os
+ 3. The python packages system and os
 
 *pull.py* requires the following programs to be installed:
  1. python3
  2. rename
- 3 the python packages system and os
+ 3. The python packages system and os
 All of these should come preinstalled on Ubuntu 18.04, 20.04 and many more distributions.
 
 ### How do I get these scripts without copy pasting?
