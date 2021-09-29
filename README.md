@@ -16,7 +16,7 @@ The inputfiles in the folder will follow the logic *filename_i.inp* where *i* is
 The random seed will be changed for every individual inputfile automatically.
 You should be able to enter the folder and upload all the files to your desired folder on a cluster and start the calculation there.
 
-### Processing your simulationdata in flair.
+### Processing your simulation data in flair.
 After the cluster is done with your simulations you can download all files created to the folder created using *push.py* and after making sure pull.py is in this folder type
 
 ```shell
@@ -42,6 +42,9 @@ You should now be able to open *filename.inp* using flair and all data should be
 *pull.py* requires the following programs to be installed:
  1. python3
  2. rename
+    ```shell
+    sudo apt install rename
+    ```
  3. The python packages system and os
 
 All of these should come preinstalled on Ubuntu 18.04, 20.04 and many more distributions.
