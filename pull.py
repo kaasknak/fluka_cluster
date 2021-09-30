@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-
 import os
 import sys
+import shutil
 
 def numToLetter(num):
     convert={
@@ -39,6 +39,10 @@ def numToLetter(num):
 filename=sys.argv[1][:-4]
 first=int(sys.argv[2])
 last=int(sys.argv[3])+1
+
+if shutil.which("rename")==None:
+    print("rename is missing. Please install rename.\nOn Ubuntu you can do this by running 'sudo apt install rename'")
+    exit()
 
 for i in range(first,last):
     os.system("rename 's/_"+str(i)+".inp/_"+numToLetter(i)+".inp/' "+filename+"*")

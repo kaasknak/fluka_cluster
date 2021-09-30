@@ -47,7 +47,8 @@ You should now be able to open *filename.inp* using flair and all data should be
     ```
  3. The python packages system and os
 
-All of these should come preinstalled on Ubuntu 18.04, 20.04 and many more distributions.
+With the exception of *rename* all of these should come preinstalled on Ubuntu 18.04, 20.04 and many more distributions.
+If you are not using a Ubuntu you probably know how to install this yourself.
 
 ### How do I get these scripts without copy pasting?
 Easiest way is just to use git. Open the terminal and type
