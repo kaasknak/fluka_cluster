@@ -20,18 +20,24 @@ You should be able to enter the folder and upload all the files to your desired 
 After the cluster is done with your simulations you can download all files created to the folder created using *push.py* and after making sure pull.py is in this folder type
 
 ```shell
-python3 pull.py filename.inp 1 10
+python3 pull.py filename.inp 1 10 5
 ```
+ 1. *filename.inp* is your original inputfile.
+ 2. *1* is the first number you will start with.
+ 3. *10* is the final number on the input file.
+ 4. *5* is the number of cycles you ran.
 This should change all the filenames back to the logic flair uses.
 You should now be able to open *filename.inp* using flair and all data should be present.
 
 ### Limitations
 *push.py* can only generate inputfiles for 676 parallel jobs (but it is rather unlikely you have that many CPUs available anyway).
-*pull.py* can only convert files back for 676 parallel jobs and only if the number of runs wasn't higher than nine
+*pull.py* can only convert files back for 676 parallel jobs and only if the number of cycles wasn't higher than nine
 ```shell
  $FLUPRO/flutil/rfluka -N0 -MX inputfile
 ````
-*X* is the number of runs.
+*X* is the number of cycles.
+
+This script starts counting from 1. Not from 0. If you ask it to start at 0 it will crash.
 
 ### Dependencies
 *push.py* requires the following programs to be installed:

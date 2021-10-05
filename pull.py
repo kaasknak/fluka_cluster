@@ -39,6 +39,7 @@ def numToLetter(num):
 filename=sys.argv[1][:-4]
 first=int(sys.argv[2])
 last=int(sys.argv[3])+1
+cycle=int(sys.argv[4])
 
 if shutil.which("rename")==None:
     print("rename is missing. Please install rename.\nOn Ubuntu you can do this by running 'sudo apt install rename'")
@@ -46,4 +47,6 @@ if shutil.which("rename")==None:
 
 for i in range(first,last):
     os.system("rename 's/_"+str(i)+".inp/_"+numToLetter(i)+".inp/' "+filename+"*")
-    os.system("rename 's/_"+str(i)+"00/_"+numToLetter(i)+"00/' "+filename+"*")
+    for j in range(1, cycle+1):
+        os.system("rename 's/_"+str(i)+"00"+str(j)+"_/_"+numToLetter(i)+"00"+str(j)+"_/' "+filename+"*")
+        os.system("rename 's/_"+str(i)+"00"+str(j)+"\./_"+numToLetter(i)+"00"+str(j)+"\./' "+filename+"*")
