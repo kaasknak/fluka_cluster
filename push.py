@@ -30,7 +30,8 @@ os.system(f'cp {fname} {folder}')
 
 for i in range(first, last):
     if i < 676:
-        os.system(f"cat {fname} | sed 's/RANDOMIZ.*/RANDOMIZ         1.0{i:>9d}./ > {folder}/{fstem}_{i}.inp")
+        regex_cmd = f's/RANDOMIZ.*/RANDOMIZ         1.0{i:>9d}./'
+        os.system(f"cat {fname} | sed '{regex_cmd}' > {folder}/{fstem}_{i}.inp")
     else:
         print("Woops! Something went wrong, you are not supposed to see this.")
         print("Did you try to enter a number higher than 676?")
