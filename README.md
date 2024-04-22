@@ -1,9 +1,3 @@
-### FLUKA input file generator/converter
-This project is a fork of https://github.com/kaasknak/fluka_cluster 
-giving the ability to the USER to run the scripts directly on the 
-cluster systems. It avoids the *rename* dependancy and now relies 
-only on the python3 regular expression package.
-
 ### Input file generator for FLUKA on cluster systems.
 These python3 scripts can be used to generate fluka inputfiles for cluster systems that don't allow access to flair.
 In case the cluster uses *slurm* and you push your simulations using an array, the system requires iterative numbering of the input file.
@@ -60,6 +54,6 @@ This script starts counting from 1. Not from 0. If you ask it to start at 0 it w
 ### How do I get these scripts without copy pasting?
 Easiest way is just to use git. Open the terminal and type
 ```shell
-https://github.com/DinkoAtanasov/fluka_cluster.git
+git clone https://github.com/kaasknak/fluka_cluster.git
 ```
 And you should find everything in the folder called *fluka_cluster*
